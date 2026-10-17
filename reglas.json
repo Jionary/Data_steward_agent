@@ -1,0 +1,15 @@
+{
+  "dataset": "clientes",
+  "version": "1.0",
+  "descripcion": "Reglas del ejercicio. Los datos son ficticios y los correos usan example.com.",
+  "columnas_requeridas": ["cliente_id", "nombre", "email", "edad", "ciudad"],
+  "reglas": [
+    {"id": "R01", "tipo": "obligatorio", "columna": "cliente_id", "severidad": "alta", "accion": "Solicitar el identificador faltante al responsable del dato."},
+    {"id": "R02", "tipo": "unico", "columna": "cliente_id", "severidad": "alta", "accion": "Revisar con el responsable si hay duplicidad o un ID asignado incorrectamente; no eliminar automáticamente."},
+    {"id": "R03", "tipo": "obligatorio", "columna": "nombre", "severidad": "media", "accion": "Solicitar el nombre faltante; no inventarlo."},
+    {"id": "R04", "tipo": "obligatorio", "columna": "email", "severidad": "alta", "accion": "Solicitar un correo de contacto válido."},
+    {"id": "R05", "tipo": "regex", "columna": "email", "patron": "[^\\s@]+@[^\\s@]+\\.[^\\s@]+", "severidad": "media", "accion": "Confirmar el correo con su propietario. El patrón solo verifica formato, no existencia."},
+    {"id": "R06", "tipo": "rango_entero", "columna": "edad", "min": 18, "max": 100, "severidad": "media", "accion": "Verificar la edad en la fuente; no sustituirla por un valor supuesto."},
+    {"id": "R07", "tipo": "catalogo", "columna": "ciudad", "valores": ["CDMX", "Puebla", "Monterrey", "Guadalajara"], "severidad": "baja", "accion": "Confirmar la ciudad y, si corresponde, actualizar el catálogo aprobado."}
+  ]
+}

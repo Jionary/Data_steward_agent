@@ -1,0 +1,9 @@
+cliente_id,nombre,email,edad,ciudad
+C001,Ana Demo,ana@example.com,24,CDMX
+C002,Luis Demo,luis.example.com,31,Puebla
+C003,,carla@example.com,27,Monterrey
+C004,Diego Demo,diego@example.com,-5,CDMX
+C002,Elena Demo,elena@example.com,29,Guadalajara
+C006,Fernando Demo,,40,Puebla
+C007,Gabriela Demo,gabriela@example.com,200,Monterrey
+C008,Hugo Demo,hugo@example.com,35,Toluca

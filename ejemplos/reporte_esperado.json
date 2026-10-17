@@ -1,0 +1,90 @@
+{
+  "dataset": "clientes",
+  "version_reglas": "1.0",
+  "total_filas": 8,
+  "columnas_faltantes": [],
+  "total_incidencias": 8,
+  "filas_con_incidencias": 7,
+  "porcentaje_filas_con_incidencias": 87.5,
+  "estado": "con_incidencias",
+  "incidencias_por_severidad": {
+    "alta": 3,
+    "media": 4,
+    "baja": 1
+  },
+  "incidencias": [
+    {
+      "regla_id": "R02",
+      "fila_csv": 3,
+      "columna": "cliente_id",
+      "valor": "C002",
+      "severidad": "alta",
+      "detalle": "Valor duplicado: aparece 2 veces.",
+      "accion_sugerida": "Revisar con el responsable si hay duplicidad o un ID asignado incorrectamente; no eliminar automáticamente."
+    },
+    {
+      "regla_id": "R02",
+      "fila_csv": 6,
+      "columna": "cliente_id",
+      "valor": "C002",
+      "severidad": "alta",
+      "detalle": "Valor duplicado: aparece 2 veces.",
+      "accion_sugerida": "Revisar con el responsable si hay duplicidad o un ID asignado incorrectamente; no eliminar automáticamente."
+    },
+    {
+      "regla_id": "R03",
+      "fila_csv": 4,
+      "columna": "nombre",
+      "valor": "",
+      "severidad": "media",
+      "detalle": "Valor obligatorio vacío.",
+      "accion_sugerida": "Solicitar el nombre faltante; no inventarlo."
+    },
+    {
+      "regla_id": "R04",
+      "fila_csv": 7,
+      "columna": "email",
+      "valor": "",
+      "severidad": "alta",
+      "detalle": "Valor obligatorio vacío.",
+      "accion_sugerida": "Solicitar un correo de contacto válido."
+    },
+    {
+      "regla_id": "R05",
+      "fila_csv": 3,
+      "columna": "email",
+      "valor": "luis.example.com",
+      "severidad": "media",
+      "detalle": "El valor no cumple el formato definido.",
+      "accion_sugerida": "Confirmar el correo con su propietario. El patrón solo verifica formato, no existencia."
+    },
+    {
+      "regla_id": "R06",
+      "fila_csv": 5,
+      "columna": "edad",
+      "valor": "-5",
+      "severidad": "media",
+      "detalle": "Se requiere un entero entre 18 y 100.",
+      "accion_sugerida": "Verificar la edad en la fuente; no sustituirla por un valor supuesto."
+    },
+    {
+      "regla_id": "R06",
+      "fila_csv": 8,
+      "columna": "edad",
+      "valor": "200",
+      "severidad": "media",
+      "detalle": "Se requiere un entero entre 18 y 100.",
+      "accion_sugerida": "Verificar la edad en la fuente; no sustituirla por un valor supuesto."
+    },
+    {
+      "regla_id": "R07",
+      "fila_csv": 9,
+      "columna": "ciudad",
+      "valor": "Toluca",
+      "severidad": "baja",
+      "detalle": "Valor fuera del catálogo permitido.",
+      "accion_sugerida": "Confirmar la ciudad y, si corresponde, actualizar el catálogo aprobado."
+    }
+  ],
+  "nota": "Las filas CSV incluyen el encabezado como fila 1. Se marca cada fila de un ID duplicado. Los valores vacíos se revisan con reglas obligatorio; las demás reglas los omiten. El porcentaje no incluye errores de esquema."
+}

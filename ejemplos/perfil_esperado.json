@@ -1,0 +1,24 @@
+{
+  "filas": 8,
+  "columnas": [
+    "cliente_id",
+    "nombre",
+    "email",
+    "edad",
+    "ciudad"
+  ],
+  "vacios_por_columna": {
+    "cliente_id": 0,
+    "nombre": 1,
+    "email": 1,
+    "edad": 0,
+    "ciudad": 0
+  },
+  "valores_distintos_no_vacios": {
+    "cliente_id": 7,
+    "nombre": 7,
+    "email": 7,
+    "edad": 8,
+    "ciudad": 5
+  }
+}
